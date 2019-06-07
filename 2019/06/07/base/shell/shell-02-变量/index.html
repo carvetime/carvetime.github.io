@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="雕琢时光">
 <meta property="og:description" content="bash的变量声明不需要加任何表示符,命名规则和大多数编程语言差不多  命名必须是英文字母，数字和下划线，首个字符不能以数字开头中间不能有空格，不能可以用标点符号，不可以用bash的关键字  变量的声明01.sh12345678910#!/bin/bashname=&amp;quot;carvetime&amp;quot;echo $&amp;#123;name&amp;#125;echo &amp;quot;my name is $&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-07T07:32:06.641Z">
+<meta property="og:updated_time" content="2019-06-07T07:37:16.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell 02 变量">
 <meta name="twitter:description" content="bash的变量声明不需要加任何表示符,命名规则和大多数编程语言差不多  命名必须是英文字母，数字和下划线，首个字符不能以数字开头中间不能有空格，不能可以用标点符号，不可以用bash的关键字  变量的声明01.sh12345678910#!/bin/bashname=&amp;quot;carvetime&amp;quot;echo $&amp;#123;name&amp;#125;echo &amp;quot;my name is $&amp;">
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:32:06" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:16" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
             
 
             
@@ -480,6 +480,7 @@
 </blockquote>
 <h2 id="变量的声明"><a href="#变量的声明" class="headerlink" title="变量的声明"></a>变量的声明</h2><p>01.sh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">name=&quot;carvetime&quot;</span><br><span class="line">echo $&#123;name&#125;</span><br><span class="line">echo &quot;my name is $&#123;name&#125;&quot;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">carvetime</span><br><span class="line">my name is carvetime</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
 <p>注意声明赋值中间不能有空格<code>name = &quot;carvetime&quot;</code>这样就会报错,这里变量的echo有点类似javascript的console.log的反斜杠</p>
+<a id="more"></a>
 <p>02.sh</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">name=<span class="string">"carvetime"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;name&#125;</span></span><br><span class="line"></span><br><span class="line">name=<span class="string">"carvetime2"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;name&#125;</span></span><br><span class="line">...</span><br><span class="line">carvetime</span><br><span class="line">carvetime2</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>可见变量可以重新赋值,重新赋值的时候还是和申明赋值一样的</p>
@@ -532,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/07/base/shell/shell-04-运算符/" rel="next" title="shell 04 运算符">
-                <i class="fa fa-chevron-left"></i> shell 04 运算符
+              <a href="/2019/06/07/base/shell/shell-05-流程控制/" rel="next" title="shell 05 流程控制">
+                <i class="fa fa-chevron-left"></i> shell 05 流程控制
               </a>
             
           </div>

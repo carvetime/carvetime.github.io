@@ -2,44 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-06-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/</loc>
+    
+    <lastmod>2019-06-07T07:37:49.673Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-05-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</loc>
     
-    <lastmod>2019-06-07T07:32:56.890Z</lastmod>
+    <lastmod>2019-06-07T07:37:41.748Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-04-%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
     
-    <lastmod>2019-06-07T07:32:37.445Z</lastmod>
+    <lastmod>2019-06-07T07:37:35.988Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-03-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/</loc>
     
-    <lastmod>2019-06-07T07:32:22.928Z</lastmod>
+    <lastmod>2019-06-07T07:37:22.933Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-02-%E5%8F%98%E9%87%8F/</loc>
     
-    <lastmod>2019-06-07T07:32:06.641Z</lastmod>
+    <lastmod>2019-06-07T07:37:16.718Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-01-%E8%B5%B7%E6%AD%A5/</loc>
     
-    <lastmod>2019-06-07T07:30:31.390Z</lastmod>
+    <lastmod>2019-06-07T07:37:05.179Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://carvetime.github.io/2019/06/07/base/shell/shell-06-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/</loc>
+    <loc>http://carvetime.github.io/2019/06/05/js/webpack/webpack-06-tree-shaking/</loc>
     
-    <lastmod>2019-06-07T07:27:39.018Z</lastmod>
+    <lastmod>2019-06-07T07:36:47.794Z</lastmod>
     
   </url>
   
@@ -68,13 +75,6 @@
     <loc>http://carvetime.github.io/2019/06/05/js/webpack/webpack-07-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</loc>
     
     <lastmod>2019-06-05T08:00:11.413Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://carvetime.github.io/2019/06/05/js/webpack/webpack-06-tree-shaking/</loc>
-    
-    <lastmod>2019-06-05T08:00:07.131Z</lastmod>
     
   </url>
   

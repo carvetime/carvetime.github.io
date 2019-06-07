@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="雕琢时光">
 <meta property="og:description" content="执行脚本的我们是可以传多个参数 终端执行传参1./examples/03/code/01.sh 1 2 3 01.sh123456789101112131415echo &quot;input value0 is $0&quot;echo &quot;input value1 is $1&quot;echo &quot;input value2 is $2&quot;echo &quot;input value3 is $3&quot;echo &quot;number of inpu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-07T07:32:22.928Z">
+<meta property="og:updated_time" content="2019-06-07T07:37:22.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell 02 参数传递">
 <meta name="twitter:description" content="执行脚本的我们是可以传多个参数 终端执行传参1./examples/03/code/01.sh 1 2 3 01.sh123456789101112131415echo &quot;input value0 is $0&quot;echo &quot;input value1 is $1&quot;echo &quot;input value2 is $2&quot;echo &quot;input value3 is $3&quot;echo &quot;number of inpu">
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:32:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
             
 
             
@@ -477,6 +477,7 @@
         <p>执行脚本的我们是可以传多个参数</p>
 <p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh 1 2 3</span><br></pre></td></tr></table></figure></p>
 <p>01.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"input value0 is <span class="variable">$0</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value1 is <span class="variable">$1</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value2 is <span class="variable">$2</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value3 is <span class="variable">$3</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"number of input is <span class="variable">$#</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"所以参数以字符串显示：$*"</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1</span><br><span class="line">input value2 is 2</span><br><span class="line">input value3 is 3</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 2 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>如果参数包含空格应该用单引号或双引号括起来</p>
 <p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh <span class="string">'1 a'</span> <span class="string">'2 b'</span> <span class="string">'3 c'</span></span><br></pre></td></tr></table></figure></p>
 <p>我们再看下输出<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1 a</span><br><span class="line">input value2 is 2 b</span><br><span class="line">input value3 is 3 c</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 a 2 b 3 c</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
@@ -516,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/07/base/shell/shell-05-流程控制/" rel="next" title="shell 05 流程控制">
-                <i class="fa fa-chevron-left"></i> shell 05 流程控制
+              <a href="/2019/06/05/js/webpack/webpack-07-生产环境/" rel="next" title="webpack 07 生产环境">
+                <i class="fa fa-chevron-left"></i> webpack 07 生产环境
               </a>
             
           </div>
