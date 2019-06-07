@@ -361,7 +361,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/3-参数传递/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-03-参数传递/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -381,7 +381,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/3-参数传递/" class="post-title-link" itemprop="url">未命名</a>
+                <a href="/2019/06/07/base/shell/shell-03-参数传递/" class="post-title-link" itemprop="url">未命名</a>
               
             
           </h1>
@@ -406,155 +406,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:53:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:53:22+08:00">2019-06-07</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>— title: shell 03 参数传递<br>date: 2019-06-07 14:01:42<br>categories:</p>
-<ul>
-<li>基础</li>
-<li>shell<br>tag:</li>
-<li>shell —<br>执行脚本的我们是可以传多个参数</li>
-</ul>
-<p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh 1 2 3</span><br></pre></td></tr></table></figure></p>
-<p>01.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"input value0 is <span class="variable">$0</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value1 is <span class="variable">$1</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value2 is <span class="variable">$2</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value3 is <span class="variable">$3</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"number of input is <span class="variable">$#</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"所以参数以字符串显示：$*"</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1</span><br><span class="line">input value2 is 2</span><br><span class="line">input value3 is 3</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 2 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>如果参数包含空格应该用单引号或双引号括起来</p>
-<p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh <span class="string">'1 a'</span> <span class="string">'2 b'</span> <span class="string">'3 c'</span></span><br></pre></td></tr></table></figure></p>
-<p>我们再看下输出<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1 a</span><br><span class="line">input value2 is 2 b</span><br><span class="line">input value3 is 3 c</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 a 2 b 3 c</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/03-参数传递/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="carvetime">
-      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
-      <meta itemprop="image" content="/images/xiaobai.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雕琢时光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/07/base/shell/03-参数传递/" class="post-title-link" itemprop="url">未命名</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-07 14:48:17 / 修改时间：15:02:44" itemprop="dateCreated datePublished" datetime="2019-06-07T14:48:17+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:48:17 / 修改时间：15:17:31" itemprop="dateCreated datePublished" datetime="2019-06-07T14:48:17+08:00">2019-06-07</time>
             
 
             
@@ -664,7 +516,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/04-运算符/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-04-运算符/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -684,7 +536,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/04-运算符/" class="post-title-link" itemprop="url">未命名</a>
+                <a href="/2019/06/07/base/shell/shell-04-运算符/" class="post-title-link" itemprop="url">未命名</a>
               
             
           </h1>
@@ -709,7 +561,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:47:54 / 修改时间：15:02:59" itemprop="dateCreated datePublished" datetime="2019-06-07T14:47:54+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:47:54 / 修改时间：15:17:06" itemprop="dateCreated datePublished" datetime="2019-06-07T14:47:54+08:00">2019-06-07</time>
             
 
             
@@ -818,7 +670,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/02-变量/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-02-变量/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -838,7 +690,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/02-变量/" class="post-title-link" itemprop="url">未命名</a>
+                <a href="/2019/06/07/base/shell/shell-02-变量/" class="post-title-link" itemprop="url">未命名</a>
               
             
           </h1>
@@ -863,7 +715,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:47:36 / 修改时间：15:02:54" itemprop="dateCreated datePublished" datetime="2019-06-07T14:47:36+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:47:36 / 修改时间：15:17:52" itemprop="dateCreated datePublished" datetime="2019-06-07T14:47:36+08:00">2019-06-07</time>
             
 
             
@@ -989,7 +841,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/01-起步/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-01-起步/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -1009,7 +861,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/01-起步/" class="post-title-link" itemprop="url">未命名</a>
+                <a href="/2019/06/07/base/shell/shell-01-起步/" class="post-title-link" itemprop="url">未命名</a>
               
             
           </h1>
@@ -1034,7 +886,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:47:19 / 修改时间：15:02:51" itemprop="dateCreated datePublished" datetime="2019-06-07T14:47:19+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:47:19 / 修改时间：15:18:18" itemprop="dateCreated datePublished" datetime="2019-06-07T14:47:19+08:00">2019-06-07</time>
             
 
             
@@ -1153,7 +1005,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/06-输入输出/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-06-参数传递/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -1173,7 +1025,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/06-输入输出/" class="post-title-link" itemprop="url">shell 06 输入输出</a>
+                <a href="/2019/06/07/base/shell/shell-06-参数传递/" class="post-title-link" itemprop="url">shell 06 输入输出</a>
               
             
           </h1>
@@ -1198,7 +1050,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:38:39 / 修改时间：15:03:07" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:39+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:38:39 / 修改时间：15:16:20" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:39+08:00">2019-06-07</time>
             
 
             
@@ -1332,7 +1184,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/05-流程控制/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-05-流程控制/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -1352,7 +1204,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/05-流程控制/" class="post-title-link" itemprop="url">shell 05 流程控制</a>
+                <a href="/2019/06/07/base/shell/shell-05-流程控制/" class="post-title-link" itemprop="url">shell 05 流程控制</a>
               
             
           </h1>
@@ -1377,7 +1229,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:01:42 / 修改时间：15:03:03" itemprop="dateCreated datePublished" datetime="2019-06-07T14:01:42+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:01:42 / 修改时间：15:16:46" itemprop="dateCreated datePublished" datetime="2019-06-07T14:01:42+08:00">2019-06-07</time>
             
 
             
@@ -2024,6 +1876,193 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/03/js/webpack/webpack-04-代码分离/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="carvetime">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
+      <meta itemprop="image" content="/images/xiaobai.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雕琢时光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/03/js/webpack/webpack-04-代码分离/" class="post-title-link" itemprop="url">webpack 04 代码分离</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-03 21:06:07" itemprop="dateCreated datePublished" datetime="2019-06-03T21:06:07+08:00">2019-06-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-05 15:59:57" itemprop="dateModified" datetime="2019-06-05T15:59:57+08:00">2019-06-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javascript/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>实际开发中我们会生成多个文件或者多个文件引用某个共用组件，打包的时候不可能全部打包到一个bundle里面，webpack通常有三种方式</p>
+<h2 id="入口配置"><a href="#入口配置" class="headerlink" title="入口配置"></a>入口配置</h2><p>这是一种简单直观的代码分离方式，我们来看下以下配置</p>
+<p>webpack.config.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</span><br><span class="line"><span class="keyword">const</span> HTMLWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    mode: <span class="string">'development'</span>,</span><br><span class="line">    entry: &#123;</span><br><span class="line">        index: <span class="string">'./examples/04/code/src/index.js'</span>,</span><br><span class="line">        another: <span class="string">'./examples/04/code/src/another-module.js'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> HTMLWebpackPlugin(&#123;</span><br><span class="line">            title: <span class="string">'Code Splitting'</span></span><br><span class="line">        &#125;),</span><br><span class="line">    ],</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">'[name]-bundle.js'</span>,</span><br><span class="line">        path: path.resolve(__dirname, <span class="string">'examples/04/code/dist'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/06/03/js/webpack/webpack-04-代码分离/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2073,7 +2112,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2106,7 +2145,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2131,7 +2170,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
