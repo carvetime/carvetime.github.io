@@ -381,7 +381,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/17/js/babel/babel-core/" class="post-title-link" itemprop="url">@babel/core</a>
+                <a href="/2019/06/17/js/babel/babel-core/" class="post-title-link" itemprop="url">babel7 入门</a>
               
             
           </h1>
@@ -406,12 +406,24 @@
                 
               
 
-              <time title="创建时间：2019-06-17 09:24:29 / 修改时间：09:26:54" itemprop="dateCreated datePublished" datetime="2019-06-17T09:24:29+08:00">2019-06-17</time>
+              <time title="创建时间：2019-06-17 09:24:29" itemprop="dateCreated datePublished" datetime="2019-06-17T09:24:29+08:00">2019-06-17</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-19 16:09:47" itemprop="dateModified" datetime="2019-06-19T16:09:47+08:00">2019-06-19</time>
               
             
           </span>
@@ -435,7 +447,7 @@
                   ，
                 
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/babel/babel-core/" itemprop="url" rel="index"><span itemprop="name">@babel/core</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/babel/babel7-入门/" itemprop="url" rel="index"><span itemprop="name">babel7 入门</span></a></span>
 
                 
                 
@@ -470,21 +482,17 @@
 
       
         
-          
-            <p>@bable/core是babel7的核心包，主要对提供对代码的语法词法分析及转换的方法</p>
+          <h2 id="bable-core"><a href="#bable-core" class="headerlink" title="@bable/core"></a>@bable/core</h2><p>@bable/core是babel7的核心包，主要对提供对代码的语法词法分析及转换的方法</p>
 <p>首先npm安装下<code>@bable/core</code>包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @babel/core --save-dev</span><br></pre></td></tr></table></figure></p>
-<p>我们下简单看下<code>@bable/core</code>提供的几个核心方法</p>
-<p>index00.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> babel = <span class="built_in">require</span>(<span class="string">"@babel/core"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> parsedAst = babel.parse(<span class="string">'const demofunc0 = res =&gt; &#123;console.log("func 0")&#125;'</span>, &#123;&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(parsedAst);</span><br></pre></td></tr></table></figure></p>
-<p>打印出来就是AST语法树<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Node &#123;</span><br><span class="line">  type: &apos;File&apos;,</span><br><span class="line">  start: 0,</span><br><span class="line">  end: 46,</span><br><span class="line">  loc:</span><br><span class="line">   SourceLocation &#123;</span><br><span class="line">     start: Position &#123; line: 1, column: 0 &#125;,</span><br><span class="line">     end: Position &#123; line: 1, column: 46 &#125; &#125;,</span><br><span class="line">  program:</span><br><span class="line">   Node &#123;</span><br><span class="line">     type: &apos;Program&apos;,</span><br><span class="line">     start: 0,</span><br><span class="line">     end: 46,</span><br><span class="line">     loc: SourceLocation &#123; start: [Position], end: [Position] &#125;,</span><br><span class="line">     sourceType: &apos;module&apos;,</span><br><span class="line">     interpreter: null,</span><br><span class="line">     body: [ [Node] ],</span><br><span class="line">     directives: [] &#125;,</span><br><span class="line">  comments: [] &#125;</span><br></pre></td></tr></table></figure></p>
-<p>接着我们对AST进行转换操作<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = babel.transformFromAstSync(parsedAst, &#123;&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"result"</span>,result);</span><br></pre></td></tr></table></figure></p>
-<p>打印出后的代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">metadata</span>: &#123;&#125;,</span><br><span class="line">  options:</span><br><span class="line">   &#123; <span class="attr">babelrc</span>: <span class="literal">false</span>,</span><br><span class="line">     configFile: <span class="literal">false</span>,</span><br><span class="line">     passPerPreset: <span class="literal">false</span>,</span><br><span class="line">     envName: <span class="string">'development'</span>,</span><br><span class="line">     cwd: <span class="string">'/Users/xxxx/learn/js/study/study-babel'</span>,</span><br><span class="line">     root: <span class="string">'/Users/xxxx/learn/js/study/study-babel'</span>,</span><br><span class="line">     plugins: [],</span><br><span class="line">     presets: [],</span><br><span class="line">     parserOpts:</span><br><span class="line">      &#123; <span class="attr">sourceType</span>: <span class="string">'module'</span>, <span class="attr">sourceFileName</span>: <span class="literal">undefined</span>, <span class="attr">plugins</span>: [] &#125;,</span><br><span class="line">     generatorOpts:</span><br><span class="line">      &#123; <span class="attr">filename</span>: <span class="literal">undefined</span>,</span><br><span class="line">        auxiliaryCommentBefore: <span class="literal">undefined</span>,</span><br><span class="line">        auxiliaryCommentAfter: <span class="literal">undefined</span>,</span><br><span class="line">        retainLines: <span class="literal">undefined</span>,</span><br><span class="line">        comments: <span class="literal">true</span>,</span><br><span class="line">        shouldPrintComment: <span class="literal">undefined</span>,</span><br><span class="line">        compact: <span class="string">'auto'</span>,</span><br><span class="line">        minified: <span class="literal">undefined</span>,</span><br><span class="line">        sourceMaps: <span class="literal">false</span>,</span><br><span class="line">        sourceRoot: <span class="literal">undefined</span>,</span><br><span class="line">        sourceFileName: <span class="string">'unknown'</span> &#125; &#125;,</span><br><span class="line">  ast: <span class="literal">null</span>,</span><br><span class="line">  code: <span class="string">'var demofunc0 = res =&gt; &#123;\n  console.log("func 0");\n&#125;;'</span>,</span><br><span class="line">  map: <span class="literal">null</span>,</span><br><span class="line">  sourceType: <span class="string">'module'</span> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>可见AST又被转换还原成了之前箭头方法<code>code: &#39;var demofunc0 = res =&gt; {\n  console.log(&quot;func 0&quot;);\n};</code></p>
-<p>下面我们通过babel提供命令行工具来执行验证下@babel/core</p>
-<p>首先我们先安装下@babel-cli<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev @babel/cli</span><br></pre></td></tr></table></figure></p>
-<p>然后执行终端命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npx babel ./examples/01/code01/src/index01.js --out</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">const demofunc1 = res =&gt; &#123;</span><br><span class="line">  console.log(<span class="string">"func 1"</span>);</span><br><span class="line">&#125;;</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>默认的在终端执行babel –out方法实际也就是@babel/core对代码进行了parse和transform，因为没有做任何的参数插件配置，所以代码还是返回原来的代码。</p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/06/17/js/babel/babel-core/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -714,7 +722,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-01-起步/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-03-参数传递/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -734,7 +742,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/shell-01-起步/" class="post-title-link" itemprop="url">shell 01 起步</a>
+                <a href="/2019/06/07/base/shell/shell-03-参数传递/" class="post-title-link" itemprop="url">shell 02 参数传递</a>
               
             
           </h1>
@@ -759,7 +767,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:05" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
             
 
             
@@ -823,11 +831,13 @@
 
       
         
-          <p>shell是c语言编写的用于用户与Linux建立直接操作的接口程序，它遵循一定的语法将命令解释传递给系统，同时将shell语法各种指令集合成纯文本我们称shell脚本。<br>shell 又常分 Bourne shell (sh), C shell (csh), 和 Korn shell (ksh) 三种shell。本次我们学习的是Bourne Again shell (bash)，bash是基于sh的扩展，在sh的基础上，bash增加了命令行补齐、通配符、输入输出重定向、管道、提示符、作业控制等功能</p>
+          <p>执行脚本的我们是可以传多个参数</p>
+<p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh 1 2 3</span><br></pre></td></tr></table></figure></p>
+<p>01.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"input value0 is <span class="variable">$0</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value1 is <span class="variable">$1</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value2 is <span class="variable">$2</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value3 is <span class="variable">$3</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"number of input is <span class="variable">$#</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"所以参数以字符串显示：$*"</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1</span><br><span class="line">input value2 is 2</span><br><span class="line">input value3 is 3</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 2 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/06/07/base/shell/shell-01-起步/#more" rel="contents">
+              <a class="btn" href="/2019/06/07/base/shell/shell-03-参数传递/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1065,7 +1075,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-03-参数传递/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-01-起步/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -1085,7 +1095,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/07/base/shell/shell-03-参数传递/" class="post-title-link" itemprop="url">shell 02 参数传递</a>
+                <a href="/2019/06/07/base/shell/shell-01-起步/" class="post-title-link" itemprop="url">shell 01 起步</a>
               
             
           </h1>
@@ -1110,7 +1120,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
+              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:05" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
             
 
             
@@ -1174,13 +1184,11 @@
 
       
         
-          <p>执行脚本的我们是可以传多个参数</p>
-<p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh 1 2 3</span><br></pre></td></tr></table></figure></p>
-<p>01.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"input value0 is <span class="variable">$0</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value1 is <span class="variable">$1</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value2 is <span class="variable">$2</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value3 is <span class="variable">$3</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"number of input is <span class="variable">$#</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"所以参数以字符串显示：$*"</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1</span><br><span class="line">input value2 is 2</span><br><span class="line">input value3 is 3</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 2 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+          <p>shell是c语言编写的用于用户与Linux建立直接操作的接口程序，它遵循一定的语法将命令解释传递给系统，同时将shell语法各种指令集合成纯文本我们称shell脚本。<br>shell 又常分 Bourne shell (sh), C shell (csh), 和 Korn shell (ksh) 三种shell。本次我们学习的是Bourne Again shell (bash)，bash是基于sh的扩展，在sh的基础上，bash增加了命令行补齐、通配符、输入输出重定向、管道、提示符、作业控制等功能</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/06/07/base/shell/shell-03-参数传递/#more" rel="contents">
+              <a class="btn" href="/2019/06/07/base/shell/shell-01-起步/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
