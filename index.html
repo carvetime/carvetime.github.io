@@ -406,7 +406,7 @@
                 
               
 
-              <time title="创建时间：2019-07-05 15:28:22 / 修改时间：15:30:41" itemprop="dateCreated datePublished" datetime="2019-07-05T15:28:22+08:00">2019-07-05</time>
+              <time title="创建时间：2019-07-05 15:28:22 / 修改时间：15:37:09" itemprop="dateCreated datePublished" datetime="2019-07-05T15:28:22+08:00">2019-07-05</time>
             
 
             
@@ -463,17 +463,17 @@
 
       
         
-          
-            <p>线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。</p>
+          <p>线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。</p>
 <p>下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用</p>
-<p>LineTabel.h<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> data[MAX];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">queryassert</span><span class="params">(<span class="keyword">int</span> index, struct LineTable <span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= <span class="built_in">list</span>.length) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d超出了线性表的范围"</span>,index);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertassert</span><span class="params">(<span class="keyword">int</span> index, struct LineTable <span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">list</span>.length == MAX) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"线性表已满"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt; <span class="built_in">list</span>.length) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d超出了线性表的范围"</span>,index);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LineTable.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> <span class="title">lineTable</span> = &#123;</span><span class="string">"abcdefghig"</span>,<span class="number">10</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">getElementByIndex</span><span class="params">(index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    queryassert(index,lineTable);</span><br><span class="line">    <span class="keyword">return</span> lineTable.data[index];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> element = getElementByIndex(<span class="number">20</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"获取的元素是%c"</span>,element);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过以上代码可以发现，线性表的顺序存储方式对于查找元素是很方便的，时间复杂度只有O(1)。</p>
-<h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LineTable.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> <span class="title">lineTable</span> = &#123;</span><span class="string">"abcde"</span>,<span class="number">5</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    insertassert(index,lineTable);</span><br><span class="line">    <span class="keyword">if</span> (index &lt; lineTable.length) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = index; k &lt; lineTable.length; k++)&#123;</span><br><span class="line">            lineTable.data[k+<span class="number">1</span>] = lineTable.data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    lineTable.data[index] = c;</span><br><span class="line">    lineTable.length ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    insert(<span class="number">5</span>,<span class="string">'y'</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"插入后的线性表数据是%s,长度是%d"</span>,lineTable.data,lineTable.length);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>插入操作相对查找是要复杂点，根据插入位置不同时间复杂度也不同，O(1)至O(n)，平均时间复杂度(n-1)/2,按时间复杂度计算原则，算是O(n)，另外还有删除操作，有时间的可以试试，基本和插入类似是一个反向操作。</p>
-<p>可见线性表的顺序存储结构中，因为有固有的顺序所以查找是很方便的，但是修改删除还是相对麻烦的，基本上是修改删除一个元素就要移动大多数其他元素，另外当线性表长度很长时，难以确认储存空间容量及寻找一段很长的连续的存储空间。</p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/05/assembly/线性表-顺序存储/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -889,6 +889,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-03-参数传递/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="carvetime">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
+      <meta itemprop="image" content="/images/xiaobai.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雕琢时光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/07/base/shell/shell-03-参数传递/" class="post-title-link" itemprop="url">shell 02 参数传递</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>执行脚本的我们是可以传多个参数</p>
+<p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh 1 2 3</span><br></pre></td></tr></table></figure></p>
+<p>01.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"input value0 is <span class="variable">$0</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value1 is <span class="variable">$1</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value2 is <span class="variable">$2</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value3 is <span class="variable">$3</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"number of input is <span class="variable">$#</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"所以参数以字符串显示：$*"</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1</span><br><span class="line">input value2 is 2</span><br><span class="line">input value3 is 3</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 2 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/06/07/base/shell/shell-03-参数传递/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-01-起步/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1003,6 +1178,180 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/06/07/base/shell/shell-01-起步/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-04-运算符/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="carvetime">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
+      <meta itemprop="image" content="/images/xiaobai.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雕琢时光">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/07/base/shell/shell-04-运算符/" class="post-title-link" itemprop="url">shell 04 运算符</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:35" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>shell除了和其他语言一样支持算数、关系、布尔、字符串运算符之外，还支持文件测试运算符</p>
+<p>我们先看下通用的的算数、关系、布尔、字符串运算符</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/06/07/base/shell/shell-04-运算符/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1355,355 +1704,6 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2019/06/07/base/shell/shell-05-流程控制/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-03-参数传递/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="carvetime">
-      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
-      <meta itemprop="image" content="/images/xiaobai.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雕琢时光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/07/base/shell/shell-03-参数传递/" class="post-title-link" itemprop="url">shell 02 参数传递</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:22" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>执行脚本的我们是可以传多个参数</p>
-<p>终端执行传参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./examples/03/code/01.sh 1 2 3</span><br></pre></td></tr></table></figure></p>
-<p>01.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"input value0 is <span class="variable">$0</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value1 is <span class="variable">$1</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value2 is <span class="variable">$2</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"input value3 is <span class="variable">$3</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"number of input is <span class="variable">$#</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"所以参数以字符串显示：$*"</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">input value0 is ./examples/03/code/01.sh</span><br><span class="line">input value1 is 1</span><br><span class="line">input value2 is 2</span><br><span class="line">input value3 is 3</span><br><span class="line">number of input is 3</span><br><span class="line">所以参数以字符串显示：1 2 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/06/07/base/shell/shell-03-参数传递/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-04-运算符/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="carvetime">
-      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
-      <meta itemprop="image" content="/images/xiaobai.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雕琢时光">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/07/base/shell/shell-04-运算符/" class="post-title-link" itemprop="url">shell 04 运算符</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-07 14:38:30 / 修改时间：15:37:35" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:30+08:00">2019-06-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>shell除了和其他语言一样支持算数、关系、布尔、字符串运算符之外，还支持文件测试运算符</p>
-<p>我们先看下通用的的算数、关系、布尔、字符串运算符</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/06/07/base/shell/shell-04-运算符/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
