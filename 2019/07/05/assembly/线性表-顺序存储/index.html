@@ -101,25 +101,25 @@
 
 
 
-  <meta name="description" content="shell默认的输入和输出都是终端，linux启动后会默认有三个文件描述分别是标准输入0，正确输出1，异常输出2 输出我们试下简单的输入一段文本到制定的文件123456filepath=&apos;./examples/06/source/users&apos;&apos;hello shell&apos; &amp;gt; $filepathcat $filepath...hello shell... &amp;gt;文件不存在时会创建一个，如果存在">
-<meta name="keywords" content="shell">
+  <meta name="description" content="线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。 下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用 LineTabel.h123456789101112131415161718192021222324252627282930313233#includ">
+<meta name="keywords" content="数据结构与算法 线性表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell 06 输入输出">
-<meta property="og:url" content="http://carvetime.github.io/2019/06/07/base/shell/shell-06-参数传递/index.html">
+<meta property="og:title" content="线性表-顺序存储">
+<meta property="og:url" content="http://carvetime.github.io/2019/07/05/assembly/线性表-顺序存储/index.html">
 <meta property="og:site_name" content="雕琢时光">
-<meta property="og:description" content="shell默认的输入和输出都是终端，linux启动后会默认有三个文件描述分别是标准输入0，正确输出1，异常输出2 输出我们试下简单的输入一段文本到制定的文件123456filepath=&apos;./examples/06/source/users&apos;&apos;hello shell&apos; &amp;gt; $filepathcat $filepath...hello shell... &amp;gt;文件不存在时会创建一个，如果存在">
+<meta property="og:description" content="线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。 下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用 LineTabel.h123456789101112131415161718192021222324252627282930313233#includ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-07T07:37:49.673Z">
+<meta property="og:updated_time" content="2019-07-05T07:30:41.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell 06 输入输出">
-<meta name="twitter:description" content="shell默认的输入和输出都是终端，linux启动后会默认有三个文件描述分别是标准输入0，正确输出1，异常输出2 输出我们试下简单的输入一段文本到制定的文件123456filepath=&apos;./examples/06/source/users&apos;&apos;hello shell&apos; &amp;gt; $filepathcat $filepath...hello shell... &amp;gt;文件不存在时会创建一个，如果存在">
+<meta name="twitter:title" content="线性表-顺序存储">
+<meta name="twitter:description" content="线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。 下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用 LineTabel.h123456789101112131415161718192021222324252627282930313233#includ">
 
 
 
 
 
 
-  <link rel="canonical" href="http://carvetime.github.io/2019/06/07/base/shell/shell-06-参数传递/">
+  <link rel="canonical" href="http://carvetime.github.io/2019/07/05/assembly/线性表-顺序存储/">
 
 
 
@@ -129,7 +129,7 @@
   };
 </script>
 
-  <title>shell 06 输入输出 | 雕琢时光</title>
+  <title>线性表-顺序存储 | 雕琢时光</title>
   
 
 
@@ -361,7 +361,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/07/base/shell/shell-06-参数传递/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/07/05/assembly/线性表-顺序存储/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -378,7 +378,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">shell 06 输入输出
+          <h1 class="post-title" itemprop="name headline">线性表-顺序存储
 
               
             
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-06-07 14:38:39 / 修改时间：15:37:49" itemprop="dateCreated datePublished" datetime="2019-06-07T14:38:39+08:00">2019-06-07</time>
+              <time title="创建时间：2019-07-05 15:28:22 / 修改时间：15:30:41" itemprop="dateCreated datePublished" datetime="2019-07-05T15:28:22+08:00">2019-07-05</time>
             
 
             
@@ -426,14 +426,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/shell/" itemprop="url" rel="index"><span itemprop="name">shell</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
 
                 
                 
@@ -474,20 +467,14 @@
       
 
       
-        <p>shell默认的输入和输出都是终端，linux启动后会默认有三个文件描述分别是标准输入0，正确输出1，异常输出2</p>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>我们试下简单的输入一段文本到制定的文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">filepath=<span class="string">'./examples/06/source/users'</span></span><br><span class="line"><span class="string">'hello shell'</span> &gt; <span class="variable">$filepath</span></span><br><span class="line">cat <span class="variable">$filepath</span></span><br><span class="line">...</span><br><span class="line">hello shell</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p><code>&gt;</code>文件不存在时会创建一个，如果存在也会覆盖之前内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"hello shell 2"</span> &gt; <span class="variable">$filepath</span></span><br><span class="line">cat  <span class="variable">$filepath</span></span><br><span class="line">...</span><br><span class="line">hello shell 2</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p><code>&gt;&gt;</code>只是追加内容在原文件内容后面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"hello shell 3"</span> &gt;&gt; <span class="variable">$filepath</span></span><br><span class="line">cat  <span class="variable">$filepath</span></span><br><span class="line">...</span><br><span class="line">hello shell 2</span><br><span class="line">hello shell 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>一般情况的shell输入终端键盘输入，我们现在讲输入重定向到文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">notfoundPath = <span class="string">'./examples/06/source/test'</span></span><br><span class="line">filepath=<span class="string">'./examples/06/source/users'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'hello shell'</span> &gt; <span class="variable">$filepath</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello shell 2"</span> &gt; <span class="variable">$filepath</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello shell 3"</span> &gt;&gt; <span class="variable">$filepath</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 文件作为输入</span></span><br><span class="line">cat &lt; <span class="variable">$filepath</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">hello shell 2</span><br><span class="line">hello shell 3</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<h2 id="异常输出"><a href="#异常输出" class="headerlink" title="异常输出"></a>异常输出</h2><p>我们看下异常的输出<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">notfoundPath=<span class="string">''</span></span><br><span class="line">filepath=<span class="string">'./examples/06/source/users'</span></span><br><span class="line">cat notfoundPath &gt; <span class="variable">$filepath</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">cat: notfoundPath: No such file or directory</span><br><span class="line"><span class="comment"># users 内容是空</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>这时候报错会默认输出到终端屏幕</p>
-<p>接下来我们将报错输入到文件中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">notfoundPath=&apos;&apos;</span><br><span class="line">cat notfoundPath 1&gt; $filepath 2&gt; &apos;./examples/06/source/error&apos; </span><br><span class="line"></span><br><span class="line"># 此时多出一个error的文件里面的内容是 cat: notfoundPath: No such file or directory</span><br></pre></td></tr></table></figure></p>
-<p><code>1&gt;</code>表示标注输出到filepath中，<code>2&gt;</code>表示错误输出到error中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">notfoundPath=<span class="string">''</span></span><br><span class="line">filepath=<span class="string">'./examples/06/source/users'</span></span><br><span class="line">cat notfoundPath &gt; <span class="variable">$filepath</span> 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line"><span class="comment">#终端输出是空，users内容是cat: notfoundPath: No such file or directory</span></span><br></pre></td></tr></table></figure>
-<p><code>&gt;</code>没写1或2的话默认是1，表示标准输出到filepath中，后面的<code>2&gt;&amp;1</code>代表错误输出按照正确输出1的路径输出</p>
-<p><code>/dev/null</code>类似一个垃圾箱，我们将所有的正确输出和异常输出都交给它<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">notfoundPath=&apos;&apos;</span><br><span class="line">cat notfoundPath &gt; /dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure></p>
-<p>这时候我们在终端屏幕及任何文件中都看不到任何的输出信息</p>
+        <p>线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。</p>
+<p>下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用</p>
+<p>LineTabel.h<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> data[MAX];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">queryassert</span><span class="params">(<span class="keyword">int</span> index, struct LineTable <span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= <span class="built_in">list</span>.length) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d超出了线性表的范围"</span>,index);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertassert</span><span class="params">(<span class="keyword">int</span> index, struct LineTable <span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">list</span>.length == MAX) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"线性表已满"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt; <span class="built_in">list</span>.length) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d超出了线性表的范围"</span>,index);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LineTable.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> <span class="title">lineTable</span> = &#123;</span><span class="string">"abcdefghig"</span>,<span class="number">10</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">getElementByIndex</span><span class="params">(index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    queryassert(index,lineTable);</span><br><span class="line">    <span class="keyword">return</span> lineTable.data[index];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> element = getElementByIndex(<span class="number">20</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"获取的元素是%c"</span>,element);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过以上代码可以发现，线性表的顺序存储方式对于查找元素是很方便的，时间复杂度只有O(1)。</p>
+<h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LineTable.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> <span class="title">lineTable</span> = &#123;</span><span class="string">"abcde"</span>,<span class="number">5</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    insertassert(index,lineTable);</span><br><span class="line">    <span class="keyword">if</span> (index &lt; lineTable.length) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = index; k &lt; lineTable.length; k++)&#123;</span><br><span class="line">            lineTable.data[k+<span class="number">1</span>] = lineTable.data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    lineTable.data[index] = c;</span><br><span class="line">    lineTable.length ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    insert(<span class="number">5</span>,<span class="string">'y'</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"插入后的线性表数据是%s,长度是%d"</span>,lineTable.data,lineTable.length);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>插入操作相对查找是要复杂点，根据插入位置不同时间复杂度也不同，O(1)至O(n)，平均时间复杂度(n-1)/2,按时间复杂度计算原则，算是O(n)，另外还有删除操作，有时间的可以试试，基本和插入类似是一个反向操作。</p>
+<p>可见线性表的顺序存储结构中，因为有固有的顺序所以查找是很方便的，但是修改删除还是相对麻烦的，基本上是修改删除一个元素就要移动大多数其他元素，另外当线性表长度很长时，难以确认储存空间容量及寻找一段很长的连续的存储空间。</p>
 
       
     </div>
@@ -511,7 +498,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/shell/" rel="tag"># shell</a>
+            <a href="/tags/数据结构与算法-线性表/" rel="tag"># 数据结构与算法 线性表</a>
           
         </div>
       
@@ -524,8 +511,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/07/base/shell/shell-01-起步/" rel="next" title="shell 01 起步">
-                <i class="fa fa-chevron-left"></i> shell 01 起步
+              <a href="/2019/06/17/js/babel/babel-core/" rel="next" title="babel7 入门">
+                <i class="fa fa-chevron-left"></i> babel7 入门
               </a>
             
           </div>
@@ -533,10 +520,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/17/js/babel/babel-core/" rel="prev" title="babel7 入门">
-                babel7 入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -753,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">1.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入"><span class="nav-number">2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常输出"><span class="nav-number">3.</span> <span class="nav-text">异常输出</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查找元素"><span class="nav-number">1.</span> <span class="nav-text">查找元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入元素"><span class="nav-number">2.</span> <span class="nav-text">插入元素</span></a></li></ol></div>
             
 
           </div>
