@@ -101,25 +101,25 @@
 
 
 
-  <meta name="description" content="webpack支持三种自定编译方式 观察模式这是webpack自带的自动编译模式，只需在package.json中配置 123&quot;scripts&quot;: &amp;#123;    &quot;watch&quot;: &quot;webpack --watch&quot;&amp;#125; 然后终端输入命令行开启观察者模式1npm run watch 此时只要文件改动，代码将会重新编译，不过需要手动刷新浏览器。">
-<meta name="keywords" content="webpack">
+  <meta name="description" content="线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。 下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用">
+<meta name="keywords" content="数据结构与算法 线性表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack 03 开发环境">
-<meta property="og:url" content="http://carvetime.github.io/2019/06/03/js/webpack/webpack-03-开发环境/index.html">
+<meta property="og:title" content="线性表-顺序存储">
+<meta property="og:url" content="http://carvetime.github.io/2019/07/05/algorithm/线性表-顺序存储/index.html">
 <meta property="og:site_name" content="雕琢时光">
-<meta property="og:description" content="webpack支持三种自定编译方式 观察模式这是webpack自带的自动编译模式，只需在package.json中配置 123&quot;scripts&quot;: &amp;#123;    &quot;watch&quot;: &quot;webpack --watch&quot;&amp;#125; 然后终端输入命令行开启观察者模式1npm run watch 此时只要文件改动，代码将会重新编译，不过需要手动刷新浏览器。">
+<meta property="og:description" content="线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。 下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-05T07:59:54.807Z">
+<meta property="og:updated_time" content="2019-07-09T13:00:49.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack 03 开发环境">
-<meta name="twitter:description" content="webpack支持三种自定编译方式 观察模式这是webpack自带的自动编译模式，只需在package.json中配置 123&quot;scripts&quot;: &amp;#123;    &quot;watch&quot;: &quot;webpack --watch&quot;&amp;#125; 然后终端输入命令行开启观察者模式1npm run watch 此时只要文件改动，代码将会重新编译，不过需要手动刷新浏览器。">
+<meta name="twitter:title" content="线性表-顺序存储">
+<meta name="twitter:description" content="线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。 下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用">
 
 
 
 
 
 
-  <link rel="canonical" href="http://carvetime.github.io/2019/06/03/js/webpack/webpack-03-开发环境/">
+  <link rel="canonical" href="http://carvetime.github.io/2019/07/05/algorithm/线性表-顺序存储/">
 
 
 
@@ -129,7 +129,7 @@
   };
 </script>
 
-  <title>webpack 03 开发环境 | 雕琢时光</title>
+  <title>线性表-顺序存储 | 雕琢时光</title>
   
 
 
@@ -361,7 +361,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/06/03/js/webpack/webpack-03-开发环境/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/07/05/algorithm/线性表-顺序存储/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="carvetime">
@@ -378,7 +378,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webpack 03 开发环境
+          <h1 class="post-title" itemprop="name headline">线性表-顺序存储
 
               
             
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-06-03 21:05:58" itemprop="dateCreated datePublished" datetime="2019-06-03T21:05:58+08:00">2019-06-03</time>
+              <time title="创建时间：2019-07-05 15:28:22" itemprop="dateCreated datePublished" datetime="2019-07-05T15:28:22+08:00">2019-07-05</time>
             
 
             
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-05 15:59:54" itemprop="dateModified" datetime="2019-06-05T15:59:54+08:00">2019-06-05</time>
+                <time title="修改时间：2019-07-09 21:00:49" itemprop="dateModified" datetime="2019-07-09T21:00:49+08:00">2019-07-09</time>
               
             
           </span>
@@ -438,14 +438,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/javascript/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
 
                 
                 
@@ -486,26 +479,16 @@
       
 
       
-        <p>webpack支持三种自定编译方式</p>
-<h2 id="观察模式"><a href="#观察模式" class="headerlink" title="观察模式"></a>观察模式</h2><p>这是webpack自带的自动编译模式，只需在package.json中配置</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">    "watch": "webpack --watch"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后终端输入命令行开启观察者模式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run watch</span><br></pre></td></tr></table></figure></p>
-<p>此时只要文件改动，代码将会重新编译，不过需要手动刷新浏览器。</p>
+        <p>线性表顺序存储，是按照一段联系的内存单元依次存储数据元素，这里我们可以使用一位数组来表示。</p>
+<p>下面我们使用c代码来实现下顺序存储的增删改查等操作,首先我们先定义一个LineTable.h文件里面定义一个线性表的结构体及简单的断言方法,以供增删改查使用</p>
 <a id="more"></a>
-<h2 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a>webpack-dev-server</h2><p>首先需要先npm安装下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev webpack-dev-server</span><br></pre></td></tr></table></figure></p>
-<p>然后配置webpack.config.js，告诉本地开发服务器在哪查找文件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">        contentBase: <span class="string">'./examples/03/code/dist/'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>接着我们在package.json里面配置下启动的script脚本<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">    "devserver": "webpack-dev-server --open"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>最后在终端运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run devserver</span><br></pre></td></tr></table></figure></p>
-<p>此时会开启一个浏览器页面，修改了index.js文件后也会同步更新</p>
-<blockquote>
-<p>本地服务器会将编译后的文件存在服务器内存中，不会写入任何编译后的文件到本地磁盘，如果想看到编译后的文件，可以配置一个publicPath，并在该目录下查看。</p>
-</blockquote>
-<h2 id="webpack-dev-middleware"><a href="#webpack-dev-middleware" class="headerlink" title="webpack-dev-middleware"></a>webpack-dev-middleware</h2><p>webpack-dev-middleware，可以结合express server进行更多的自定义配置</p>
-<p>首先我们安装下express 和 webpack-dev-middleware<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev express webpack-dev-middleware</span><br></pre></td></tr></table></figure></p>
-<p>接着配置webpack.config.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> CleanWebpackPlugin = <span class="built_in">require</span>(<span class="string">'clean-webpack-plugin'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    mode: <span class="string">'development'</span>,</span><br><span class="line">    entry: <span class="string">'./examples/03/code/src/index.js'</span>,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">            title: <span class="string">'Output Management'</span></span><br><span class="line">          &#125;)</span><br><span class="line">    ],</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">'bundle.js'</span>,</span><br><span class="line">        path: path.resolve(__dirname,<span class="string">'/examples/03/code/dist'</span>),</span><br><span class="line">        publicPath: <span class="string">'/'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后创建一个server.js文件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</span><br><span class="line"><span class="keyword">const</span> webpackDevMiddleWare = <span class="built_in">require</span>(<span class="string">'webpack-dev-middleware'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"><span class="keyword">const</span> config = <span class="built_in">require</span>(<span class="string">'../../../webpack.config.js'</span>)</span><br><span class="line"><span class="keyword">const</span> compiler = webpack(config)</span><br><span class="line"></span><br><span class="line">app.use(webpackDevMiddleWare(compiler,&#123;</span><br><span class="line">    publicPath: config.output.publicPath</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"app listening on port 3000"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>最后终端执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ./examples/03/code/server.js</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/carvetime/study-webpack" target="_blank" rel="noopener">github代码</a></p>
+<p>LineTabel.h<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> data[MAX];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">queryassert</span><span class="params">(<span class="keyword">int</span> index, struct LineTable <span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= <span class="built_in">list</span>.length) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d超出了线性表的范围"</span>,index);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertassert</span><span class="params">(<span class="keyword">int</span> index, struct LineTable <span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">list</span>.length == MAX) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"线性表已满"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt; <span class="built_in">list</span>.length) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d超出了线性表的范围"</span>,index);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LineTable.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> <span class="title">lineTable</span> = &#123;</span><span class="string">"abcdefghig"</span>,<span class="number">10</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">getElementByIndex</span><span class="params">(index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    queryassert(index,lineTable);</span><br><span class="line">    <span class="keyword">return</span> lineTable.data[index];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> element = getElementByIndex(<span class="number">20</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"获取的元素是%c"</span>,element);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过以上代码可以发现，线性表的顺序存储方式对于查找元素是很方便的，时间复杂度只有O(1)。</p>
+<h2 id="插入元素"><a href="#插入元素" class="headerlink" title="插入元素"></a>插入元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LineTable.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LineTable</span> <span class="title">lineTable</span> = &#123;</span><span class="string">"abcde"</span>,<span class="number">5</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    insertassert(index,lineTable);</span><br><span class="line">    <span class="keyword">if</span> (index &lt; lineTable.length) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = index; k &lt; lineTable.length; k++)&#123;</span><br><span class="line">            lineTable.data[k+<span class="number">1</span>] = lineTable.data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    lineTable.data[index] = c;</span><br><span class="line">    lineTable.length ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    insert(<span class="number">5</span>,<span class="string">'y'</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"插入后的线性表数据是%s,长度是%d"</span>,lineTable.data,lineTable.length);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>插入操作相对查找是要复杂点，根据插入位置不同时间复杂度也不同，O(1)至O(n)，平均时间复杂度(n-1)/2,按时间复杂度计算原则，算是O(n)，另外还有删除操作，有时间的可以试试，基本和插入类似是一个反向操作。</p>
+<p>可见线性表的顺序存储结构中，因为有固有的顺序所以查找是很方便的，但是修改删除还是相对麻烦的，基本上是修改删除一个元素就要移动大多数其他元素，另外当线性表长度很长时，难以确认储存空间容量及寻找一段很长的连续的存储空间。</p>
+<p><a href="https://github.com/carvetime/study-arithmetic/tree/master/01-%E7%BA%BF%E6%80%A7%E8%A1%A8/01-%E7%BA%BF%E6%80%A7%E8%A1%A8-%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8/code" target="_blank" rel="noopener">github代码</a></p>
 
       
     </div>
@@ -529,7 +512,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/webpack/" rel="tag"># webpack</a>
+            <a href="/tags/数据结构与算法-线性表/" rel="tag"># 数据结构与算法 线性表</a>
           
         </div>
       
@@ -542,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/03/js/webpack/webpack-02-资源管理/" rel="next" title="webpack 02 资源管理">
-                <i class="fa fa-chevron-left"></i> webpack 02 资源管理
+              <a href="/2019/06/17/js/babel/babel-core/" rel="next" title="babel7 入门">
+                <i class="fa fa-chevron-left"></i> babel7 入门
               </a>
             
           </div>
@@ -552,8 +535,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/03/js/webpack/webpack-04-代码分离/" rel="prev" title="webpack 04 代码分离">
-                webpack 04 代码分离 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/09/algorithm/线性表-链式存储/" rel="prev" title="线性表-链式存储">
+                线性表-链式存储 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -771,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#观察模式"><span class="nav-number">1.</span> <span class="nav-text">观察模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-dev-server"><span class="nav-number">2.</span> <span class="nav-text">webpack-dev-server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack-dev-middleware"><span class="nav-number">3.</span> <span class="nav-text">webpack-dev-middleware</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查找元素"><span class="nav-number">1.</span> <span class="nav-text">查找元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入元素"><span class="nav-number">2.</span> <span class="nav-text">插入元素</span></a></li></ol></div>
             
 
           </div>
