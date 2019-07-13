@@ -101,24 +101,25 @@
 
 
 
-  <meta name="description" content="Stay Hungry. Stay Foolish.">
-<meta name="keywords" content="ios javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="雕琢时光">
-<meta property="og:url" content="http://carvetime.github.io/categories/javascript/webpack/index.html">
+  <meta name="description" content="在OC中创建一个普通的实例对象，看似我们创建了一个对象，为了体现和管理类对象实例协议方法等这些关系，OC在底层设计出了三种基本的对象，分别称之为实例对象、类对象、元类对象。 实例对象实例对象就是我们平时用的最多的new、alloc出来的对象 1234NSObject *object1 = [[NSObject alloc] init];NSObject *object2 = [[NSObject">
+<meta name="keywords" content="oc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实例对象类对象元类对象">
+<meta property="og:url" content="http://carvetime.github.io/2019/07/13/ios/底层源码/实例对象类对象元类对象/index.html">
 <meta property="og:site_name" content="雕琢时光">
-<meta property="og:description" content="Stay Hungry. Stay Foolish.">
+<meta property="og:description" content="在OC中创建一个普通的实例对象，看似我们创建了一个对象，为了体现和管理类对象实例协议方法等这些关系，OC在底层设计出了三种基本的对象，分别称之为实例对象、类对象、元类对象。 实例对象实例对象就是我们平时用的最多的new、alloc出来的对象 1234NSObject *object1 = [[NSObject alloc] init];NSObject *object2 = [[NSObject">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-13T09:17:20.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="雕琢时光">
-<meta name="twitter:description" content="Stay Hungry. Stay Foolish.">
+<meta name="twitter:title" content="实例对象类对象元类对象">
+<meta name="twitter:description" content="在OC中创建一个普通的实例对象，看似我们创建了一个对象，为了体现和管理类对象实例协议方法等这些关系，OC在底层设计出了三种基本的对象，分别称之为实例对象、类对象、元类对象。 实例对象实例对象就是我们平时用的最多的new、alloc出来的对象 1234NSObject *object1 = [[NSObject alloc] init];NSObject *object2 = [[NSObject">
 
 
 
 
 
 
-  <link rel="canonical" href="http://carvetime.github.io/categories/javascript/webpack/">
+  <link rel="canonical" href="http://carvetime.github.io/2019/07/13/ios/底层源码/实例对象类对象元类对象/">
 
 
 
@@ -128,7 +129,7 @@
   };
 </script>
 
-  <title>分类: webpack | 雕琢时光</title>
+  <title>实例对象类对象元类对象 | 雕琢时光</title>
   
 
 
@@ -176,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -252,7 +253,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -340,236 +341,232 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>webpack<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/07/13/ios/底层源码/实例对象类对象元类对象/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="carvetime">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
+      <meta itemprop="image" content="/images/xiaobai.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雕琢时光">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/06/05/js/webpack/webpack-07-生产环境/" itemprop="url">
-            
-              <span itemprop="name">webpack 07 生产环境</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">实例对象类对象元类对象
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-05T15:55:16+08:00" content="2019-06-05">
-          06-05
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-13 17:13:29 / 修改时间：17:17:20" itemprop="dateCreated datePublished" datetime="2019-07-13T17:13:29+08:00">2019-07-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ios/" itemprop="url" rel="index"><span itemprop="name">ios</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ios/底层源码/" itemprop="url" rel="index"><span itemprop="name">底层源码</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/05/js/webpack/webpack-06-tree-shaking/" itemprop="url">
-            
-              <span itemprop="name">webpack 06 tree shaking</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-05T14:44:39+08:00" content="2019-06-05">
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/04/js/webpack/webpack-05-缓存/" itemprop="url">
-            
-              <span itemprop="name">webpack 05 缓存</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-04T15:34:39+08:00" content="2019-06-04">
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-04-代码分离/" itemprop="url">
-            
-              <span itemprop="name">webpack 04 代码分离</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:06:07+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-03-开发环境/" itemprop="url">
-            
-              <span itemprop="name">webpack 03 开发环境</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:05:58+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-02-资源管理/" itemprop="url">
-            
-              <span itemprop="name">webpack 02 资源管理</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:05:41+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-01-起步/" itemprop="url">
-            
-              <span itemprop="name">webpack 01 起步</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:05:10+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>在OC中创建一个普通的实例对象，看似我们创建了一个对象，为了体现和管理类对象实例协议方法等这些关系，OC在底层设计出了三种基本的对象，分别称之为实例对象、类对象、元类对象。</p>
+<h2 id="实例对象"><a href="#实例对象" class="headerlink" title="实例对象"></a>实例对象</h2><p>实例对象就是我们平时用的最多的<code>new</code>、<code>alloc</code>出来的对象</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSObject</span> *object1 = [[<span class="built_in">NSObject</span> alloc] init];</span><br><span class="line"><span class="built_in">NSObject</span> *object2 = [[<span class="built_in">NSObject</span> alloc] init];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, object1, object2);</span><br><span class="line"><span class="comment">// 0x100567bb0 0x100566130</span></span><br></pre></td></tr></table></figure>
+<p>每一次new出来一个实例对象，都是不同的一个内存空间，相互之间是独立的，在之前章节讲过通过clang编译成c/c++代码我们可以出实例对象对应的实例对象的的结构体就是一个isa指针以及成员变量的值，注意这里只是成员变量的值，其他的成员变量的类型信息等都不在这里。</p>
+<a id="more"></a>
+<h2 id="类对象"><a href="#类对象" class="headerlink" title="类对象"></a>类对象</h2><p>类对象不需要我们手动去创建，这个在我们定义一个类或之前系统定义好的类，在runtime运行过程中，系统就会自动生成类对象，每个类有却对应一个类对象。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSObject</span> *object1 = [[<span class="built_in">NSObject</span> alloc] init];</span><br><span class="line"><span class="built_in">NSObject</span> *object2 = [[<span class="built_in">NSObject</span> alloc] init];</span><br><span class="line">Class objectClass1 = [object1 <span class="keyword">class</span>];</span><br><span class="line">Class objectClass2 = [object2 <span class="keyword">class</span>];</span><br><span class="line">Class objectClass3 = [<span class="built_in">NSObject</span> <span class="keyword">class</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// runtime</span></span><br><span class="line">Class objectClass4 = object_getClass(object1);</span><br><span class="line">Class objectClass5 = object_getClass(object2);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p %p %p %p"</span>, objectClass1, objectClass2, objectClass3, objectClass4, objectClass5);</span><br><span class="line"><span class="comment">// 0x7fff9138b140 0x7fff9138b140 0x7fff9138b140 0x7fff9138b140 0x7fff9138b140</span></span><br></pre></td></tr></table></figure>
+<p>通过实例对象或者类调用class方法或者使用runtime的object_getClass都可以获取类的实例对象，通过打印可以看出类对象的地址都是同一个，进一步验证了类对象只有一个。这里类对象对应的c++结构体是储存的是，isa、superclass指针、方法信息、成员变量属性信息、协议等。</p>
+<h2 id="元类对象"><a href="#元类对象" class="headerlink" title="元类对象"></a>元类对象</h2><p>通过runteim的object_getClass方法我们可以获取元类对象<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Student *stu1 = [Student new];</span><br><span class="line">Student *stu2 = [Student new];</span><br><span class="line">Class stuClass1 = [stu1 <span class="keyword">class</span>];</span><br><span class="line">Class stuClass2 = [stu2 <span class="keyword">class</span>];</span><br><span class="line">Class stuClass3 = [Student <span class="keyword">class</span>];</span><br><span class="line">Class stuClass4 = object_getClass(object1);</span><br><span class="line">Class stuClass5 = object_getClass(stu1);</span><br><span class="line">Class stuClass6 = object_getClass(stu2);</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p %p %p %p %p"</span>, stuClass1, stuClass2, stuClass3, stuClass4, stuClass5, stuClass6);</span><br><span class="line"><span class="comment">// 0x1000025a0 0x1000025a0 0x1000025a0 0x7fff9138b140 0x1000025a0 0x1000025a0</span></span><br></pre></td></tr></table></figure></p>
+<p>打印结果发现不同实例对象的元类对象同一个，元类对象存储isa、superclass指针、类的类方法信息等</p>
+<h2 id="实例对象类对象和元类对象之间的关系"><a href="#实例对象类对象和元类对象之间的关系" class="headerlink" title="实例对象类对象和元类对象之间的关系"></a>实例对象类对象和元类对象之间的关系</h2><p>三个对象之间各自负责储存这各自的信息，其中贯穿在三者之间的起到相互联系左右的是isa指针。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSObject</span> *object = [[<span class="built_in">NSObject</span> alloc] init];</span><br><span class="line">Class objectClass = [<span class="built_in">NSObject</span> <span class="keyword">class</span>];</span><br><span class="line">Class objectMetaClass = object_getClass([<span class="built_in">NSObject</span> <span class="keyword">class</span>]);</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p %p"</span>, object, objectClass, objectMetaClass);</span><br><span class="line"><span class="comment">// 0x100507290 0x7fff9138b140 0x7fff9138b0f0</span></span><br></pre></td></tr></table></figure>
+<p>这是xcode打断点我们试着通过实例对象的isa指针去找下类对象</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(lldb) p/x object-&gt;isa;</span><br><span class="line">(Class) <span class="variable">$0</span> = 0x001dffff9a7dc141 NSObject</span><br><span class="line"></span><br><span class="line">(lldb) p/x object;</span><br><span class="line">(NSObject *) <span class="variable">$3</span> = 0x00007fff9a7dc140 NSObject</span><br><span class="line">``` </span><br><span class="line">我们发现object-&gt;isa与objectClass的地址不同，这是因为从64bit开始，isa需要进行一次位运算，才能计算出真实地址,位运算的值我们可以通过下载objc源代码找到。</span><br><span class="line">```bash</span><br><span class="line">(lldb) p/x 0x001dffff9a7dc141 &amp; 0x00007ffffffffff8</span><br><span class="line">(long) <span class="variable">$7</span> = 0x00007fff9a7dc140</span><br></pre></td></tr></table></figure>
+<p>位运算后得到的object-&gt;isa === objectClass 两个地址完全相等,可见实例对象的isa是指向类对象的，那按照这个思路我们在试试类对象的isa是不是也指向元类对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(lldb) p/x objectClass-&gt;cls;</span><br><span class="line">error: member reference base <span class="built_in">type</span> <span class="string">'Class'</span> is not a structure or union</span><br></pre></td></tr></table></figure></p>
+<p>可能是没有暴露出来，为了拿到isa指针的地址，我们自己创建一个同样的结构体并通过强制转化拿到isa指针。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> xx_cc_objc_class&#123;</span><br><span class="line">        Class isa;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="keyword">struct</span> xx_cc_objc_class *objectCls2 = (__bridge <span class="keyword">struct</span> xx_cc_objc_class *)(objectClass);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p"</span>,objectCls2);</span><br></pre></td></tr></table></figure></p>
+<p>我们再重新run一下看看,并断点试试<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(lldb) p/x objectCls2-&gt;isa;</span><br><span class="line">(Class) <span class="variable">$0</span> = 0x001dffffa495c0f1</span><br><span class="line">(lldb) p/x 0x001dffffa495c0f1 &amp; 0x00007ffffffffff8</span><br><span class="line">(long) <span class="variable">$1</span> = 0x00007fffa495c0f0</span><br></pre></td></tr></table></figure></p>
+<p>objectCls2的isa指针经过位运算之后的地址是meta-class的地址,可见类对象的isa是指向原类对象。</p>
+<p>小结：这里对实例对象、类对象、元类对象做了简单概括和关系的梳理，需要进步了解三者的关系及内部结构需要查看objc_class内部结构，将在下一章会继续窥探。</p>
+<p><a href="https://github.com/carvetime/study-ios/blob/master/demo02-实例对象类对象元类对象/code/demo02-实例对象类对象元类对象/demo02-实例对象类对象元类对象/main.m" target="_blank" rel="noopener">github代码</a></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oc/" rel="tag"># oc</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/12/algorithm/线性表-双向链表/" rel="next" title="线性表-双向链表">
+                <i class="fa fa-chevron-left"></i> 线性表-双向链表
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -590,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -742,6 +748,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例对象"><span class="nav-number">1.</span> <span class="nav-text">实例对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类对象"><span class="nav-number">2.</span> <span class="nav-text">类对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元类对象"><span class="nav-number">3.</span> <span class="nav-text">元类对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例对象类对象和元类对象之间的关系"><span class="nav-number">4.</span> <span class="nav-text">实例对象类对象和元类对象之间的关系</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -898,6 +921,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -907,6 +934,34 @@
 
 
   
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '5de6017cc37b327830c5',
+    clientSecret: '79b6e97e87e5d12c2648a7f55051c3f7e1a2b1c3',
+    repo: 'carvetime.github.io',
+    owner: 'carvetime',
+    admin: ['carvetime'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
 
 
 
