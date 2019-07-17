@@ -101,24 +101,25 @@
 
 
 
-  <meta name="description" content="Never too old to learn">
-<meta name="keywords" content="ios javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="雕琢时光">
-<meta property="og:url" content="http://carvetime.github.io/categories/javascript/webpack/index.html">
+  <meta name="description" content="KVO在开发过程中常用于监听对象属性，那么苹果是怎么实现这样一个监听过程的呢，首先我们先看下监听的方法 先定义一个Baby对象123456#import &amp;lt;Foundation/Foundation.h&amp;gt;@interface Baby : NSObject@property (nonatomic,assign) NSInteger age;@end">
+<meta name="keywords" content="oc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KVO本质">
+<meta property="og:url" content="http://carvetime.github.io/2019/07/14/ios/底层源码/KVO本质/index.html">
 <meta property="og:site_name" content="雕琢时光">
-<meta property="og:description" content="Never too old to learn">
+<meta property="og:description" content="KVO在开发过程中常用于监听对象属性，那么苹果是怎么实现这样一个监听过程的呢，首先我们先看下监听的方法 先定义一个Baby对象123456#import &amp;lt;Foundation/Foundation.h&amp;gt;@interface Baby : NSObject@property (nonatomic,assign) NSInteger age;@end">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-17T12:56:20.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="雕琢时光">
-<meta name="twitter:description" content="Never too old to learn">
+<meta name="twitter:title" content="KVO本质">
+<meta name="twitter:description" content="KVO在开发过程中常用于监听对象属性，那么苹果是怎么实现这样一个监听过程的呢，首先我们先看下监听的方法 先定义一个Baby对象123456#import &amp;lt;Foundation/Foundation.h&amp;gt;@interface Baby : NSObject@property (nonatomic,assign) NSInteger age;@end">
 
 
 
 
 
 
-  <link rel="canonical" href="http://carvetime.github.io/categories/javascript/webpack/">
+  <link rel="canonical" href="http://carvetime.github.io/2019/07/14/ios/底层源码/KVO本质/">
 
 
 
@@ -128,7 +129,7 @@
   };
 </script>
 
-  <title>分类: webpack | 雕琢时光</title>
+  <title>KVO本质 | 雕琢时光</title>
   
 
 
@@ -176,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -252,7 +253,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -340,236 +341,235 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>webpack<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/07/14/ios/底层源码/KVO本质/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wendell Koan">
+      <meta itemprop="description" content="Never too old to learn">
+      <meta itemprop="image" content="/images/xiaobai.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雕琢时光">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/06/05/js/webpack/webpack-07-生产环境/" itemprop="url">
-            
-              <span itemprop="name">webpack 07 生产环境</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">KVO本质
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-05T15:55:16+08:00" content="2019-06-05">
-          06-05
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-14 14:38:01" itemprop="dateCreated datePublished" datetime="2019-07-14T14:38:01+08:00">2019-07-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-17 20:56:20" itemprop="dateModified" datetime="2019-07-17T20:56:20+08:00">2019-07-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ios/" itemprop="url" rel="index"><span itemprop="name">ios</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ios/底层源码/" itemprop="url" rel="index"><span itemprop="name">底层源码</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/05/js/webpack/webpack-06-tree-shaking/" itemprop="url">
-            
-              <span itemprop="name">webpack 06 tree shaking</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-05T14:44:39+08:00" content="2019-06-05">
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/04/js/webpack/webpack-05-缓存/" itemprop="url">
-            
-              <span itemprop="name">webpack 05 缓存</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-04T15:34:39+08:00" content="2019-06-04">
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-04-代码分离/" itemprop="url">
-            
-              <span itemprop="name">webpack 04 代码分离</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:06:07+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-03-开发环境/" itemprop="url">
-            
-              <span itemprop="name">webpack 03 开发环境</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:05:58+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-02-资源管理/" itemprop="url">
-            
-              <span itemprop="name">webpack 02 资源管理</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:05:41+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/03/js/webpack/webpack-01-起步/" itemprop="url">
-            
-              <span itemprop="name">webpack 01 起步</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-03T21:05:10+08:00" content="2019-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>KVO在开发过程中常用于监听对象属性，那么苹果是怎么实现这样一个监听过程的呢，首先我们先看下监听的方法</p>
+<p>先定义一个Baby对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line"></span><br><span class="line">@interface Baby : NSObject</span><br><span class="line"></span><br><span class="line">@property (nonatomic,assign) NSInteger age;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p> 然后再ViewController中定义两个属性<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> @interface ViewController ()</span><br><span class="line"></span><br><span class="line">@property (nonatomic, strong) Baby *by1;</span><br><span class="line">@property (nonatomic, strong) Baby *by2;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p> 然后再viewDidLoad方法中监听<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"> - (void)viewDidLoad &#123;</span><br><span class="line">    </span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    self.by1 = [Baby new];</span><br><span class="line">    self.by2 = [Baby new];</span><br><span class="line">    NSLog(@&quot;添加监听前by1 = %p, by2 = %p&quot;,[self.by1 methodForSelector:@selector(setAge:)],[self.by2 methodForSelector:@selector(setAge:)]);</span><br><span class="line">    //添加监听前by1 = 0x107c97870, by2 = 0x107c97870</span><br><span class="line">    [self.by1 addObserver:self forKeyPath:@&quot;age&quot; options:NSKeyValueObservingOptionNew context:nil];</span><br><span class="line">    NSLog(@&quot;添加监听后by1 = %p, by2 = %p&quot;,[self.by1 methodForSelector:@selector(setAge:)],[self.by2 methodForSelector:@selector(setAge:)]);</span><br><span class="line">    //添加监听后by1 = 0x107ff1164, by2 = 0x107c97870</span><br><span class="line">    //(lldb) p (IMP)0x107ff1164</span><br><span class="line">    //(IMP) $2 = 0x0000000107ff1164 (Foundation`_NSSetLongLongValueAndNotify)</span><br><span class="line">    </span><br><span class="line">    NSLog(@&quot;by1 = %@, by2 = %@&quot;,self.by1, self.by2);</span><br><span class="line"></span><br><span class="line">    //(lldb) po self.by1-&gt;isa; NSKVONotifying_Baby</span><br><span class="line">    //(lldb) po self.by2-&gt;isa;  Baby</span><br><span class="line">    </span><br><span class="line">    /*</span><br><span class="line">     添加监听后runtime会动态创建一个子类NSKVONotifyin_Baby,并同时修该对象的isa指针指向NSKVONotifyin_Baby，其superclass指针指向Baby类,并且NSKVONotifyin_Baby内部一定对setAge方法做了单独的实现</span><br><span class="line">     </span><br><span class="line">     NSKVONotifyin_Baby中的setage方法中其实调用了 Fundation框架中C语言函数 _NSsetIntValueAndNotify，_NSsetIntValueAndNotify内部做的操作相当于，首先调用willChangeValueForKey 将要改变方法，之后调用父类的setage方法对成员变量赋值，最后调用didChangeValueForKey已经改变方法。didChangeValueForKey中会调用监听器的监听方法，最终来到监听者的observeValueForKeyPath方法中。</span><br><span class="line">     */</span><br><span class="line">    [self printMethods: object_getClass(self.by1)];</span><br><span class="line">    [self printMethods: object_getClass(self.by2)];</span><br><span class="line">    </span><br><span class="line">    //(lldb) po object_getClass(self.by1) NSKVONotifying_Baby</span><br><span class="line">    //(lldb) po [self.by1 class]; Baby</span><br><span class="line">    //NSKVONotifying_Baby - setAge: class dealloc _isKVOA</span><br><span class="line">    </span><br><span class="line">    // class 方法重写直接返回Baby</span><br><span class="line">    // set方法也重写了 set方法是执行willChangeValueForKey didChangeValueForKey方法</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary&lt;NSKeyValueChangeKey,id&gt; *)change context:(void *)context&#123;</span><br><span class="line">    NSLog(@&quot;observer baby age change %@&quot;,change);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)touchesBegan:(NSSet&lt;UITouch *&gt; *)touches withEvent:(UIEvent *)event&#123;</span><br><span class="line">    self.by1.age ++;</span><br><span class="line">    self.by2.age ++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)printMethods:(Class)cls&#123;</span><br><span class="line">    unsigned int count ;</span><br><span class="line">    Method *methods = class_copyMethodList(cls, &amp;count);</span><br><span class="line">    NSMutableString *methodNames = [NSMutableString string];</span><br><span class="line">    [methodNames appendFormat:@&quot;%@ - &quot;, cls];</span><br><span class="line">    </span><br><span class="line">    for (int i = 0 ; i &lt; count; i++) &#123;</span><br><span class="line">        Method method = methods[i];</span><br><span class="line">        NSString *methodName  = NSStringFromSelector(method_getName(method));</span><br><span class="line">        </span><br><span class="line">        [methodNames appendString: methodName];</span><br><span class="line">        [methodNames appendString:@&quot; &quot;];</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    NSLog(@&quot;%@&quot;,methodNames);</span><br><span class="line">    free(methods);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>小结：使用系统的<code>addObserver</code>方法后，runtime动态创建一个NSKVONotifying前缀的子类对象，isa指针开始指向该子类，子类内部重写了set方法，执行set方法的时候会Fundation中NSsetIntValueAndNotify方法，移除执行willChangeValueForKey、set、didChangeValueForKey方法。</p>
+<p><a href="https://github.com/carvetime/study-ios/tree/master/demo04-KVO%E6%9C%AC%E8%B4%A8/code" target="_blank" rel="noopener">github代码</a></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oc/" rel="tag"># oc</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/14/ios/底层源码/Class的本质/" rel="next" title="Class的本质">
+                <i class="fa fa-chevron-left"></i> Class的本质
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/17/algorithm/栈的存储结构/" rel="prev" title="栈的存储结构">
+                栈的存储结构 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -900,6 +900,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -909,6 +913,34 @@
 
 
   
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '5de6017cc37b327830c5',
+    clientSecret: '79b6e97e87e5d12c2648a7f55051c3f7e1a2b1c3',
+    repo: 'carvetime.github.io',
+    owner: 'carvetime',
+    admin: ['carvetime'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
 
 
 

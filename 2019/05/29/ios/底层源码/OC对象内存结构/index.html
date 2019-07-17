@@ -110,7 +110,7 @@
 <meta property="og:description" content="OC对象底层其实是由c/c++结构体，然后转成汇编最后到机器语言。 isa指针oc代码中的一个普通对象1NSObject *objc = [[NSObject alloc] init]; 我们在终端用clang编译成c/c++代码1clang -rewrite-objc main.m -o main.cpp 实际生成的c/c++代码个机构体，里面包含了一个isa指针123struct NSObje">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/carvetime/study-ios/master/demo01-OC%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8/images/WX20190529-202326%402x.png">
-<meta property="og:updated_time" content="2019-06-05T05:06:22.520Z">
+<meta property="og:updated_time" content="2019-07-17T12:56:20.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OC对象内存结构">
 <meta name="twitter:description" content="OC对象底层其实是由c/c++结构体，然后转成汇编最后到机器语言。 isa指针oc代码中的一个普通对象1NSObject *objc = [[NSObject alloc] init]; 我们在终端用clang编译成c/c++代码1clang -rewrite-objc main.m -o main.cpp 实际生成的c/c++代码个机构体，里面包含了一个isa指针123struct NSObje">
@@ -196,7 +196,7 @@
     </div>
     
       
-        <p class="site-subtitle">记录学习点滴</p>
+        <p class="site-subtitle">匠心雕琢，不负时光</p>
       
     
     
@@ -366,8 +366,8 @@
     <link itemprop="mainEntityOfPage" href="http://carvetime.github.io/2019/05/29/ios/底层源码/OC对象内存结构/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="carvetime">
-      <meta itemprop="description" content="Stay Hungry. Stay Foolish.">
+      <meta itemprop="name" content="Wendell Koan">
+      <meta itemprop="description" content="Never too old to learn">
       <meta itemprop="image" content="/images/xiaobai.png">
     </span>
 
@@ -423,7 +423,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-05 13:06:22" itemprop="dateModified" datetime="2019-06-05T13:06:22+08:00">2019-06-05</time>
+                <time title="修改时间：2019-07-17 20:56:20" itemprop="dateModified" datetime="2019-07-17T20:56:20+08:00">2019-07-17</time>
               
             
           </span>
@@ -516,6 +516,9 @@
 </blockquote>
 <p>目前属性还没有复制我们继续断点往下走，再执行一次以十进制的方式查看<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">memory <span class="built_in">read</span>/4dw</span><br><span class="line">memory <span class="built_in">read</span>/4dw </span><br><span class="line"><span class="comment"># 0x1005053f0: 5065</span></span><br><span class="line"><span class="comment"># 0x1005053f4: 1933313</span></span><br><span class="line"><span class="comment"># 0x1005053f8: 4</span></span><br><span class="line"><span class="comment"># 0x1005053fc: 5</span></span><br></pre></td></tr></table></figure></p>
 <p>接下来我们来动态修改下某个属性的值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">memory write 0x1005053f8 2</span><br><span class="line">memory <span class="built_in">read</span>/4dw stu</span><br><span class="line"><span class="comment"># 0x1005053f0: 5065</span></span><br><span class="line"><span class="comment"># 0x1005053f4: 1933313</span></span><br><span class="line"><span class="comment"># 0x1005053f8: 2</span></span><br><span class="line"><span class="comment"># 0x1005053fc: 5</span></span><br><span class="line">po stu-&gt;_no</span><br><span class="line"><span class="comment"># 2</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>以上说的都是实际利用的内存空间大小，但是实际上ios对象分配最小空间是16字节（可查看通过runtime源码的instanceSize方法），所以当我们创建一个NSObject对象时，实际就是一个isa指针，在64位CUP利用了8个字节，但分配的是16个字节。另外8个字节可能是空的。</p>
+</blockquote>
 <p><a href="https://github.com/carvetime/study-ios" target="_blank" rel="noopener">github代码</a></p>
 
       
@@ -628,10 +631,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/xiaobai.png" alt="carvetime">
+              <img class="site-author-image" itemprop="image" src="/images/xiaobai.png" alt="Wendell Koan">
             
-              <p class="site-author-name" itemprop="name">carvetime</p>
-              <p class="site-description motion-element" itemprop="description">Stay Hungry. Stay Foolish.</p>
+              <p class="site-author-name" itemprop="name">Wendell Koan</p>
+              <p class="site-description motion-element" itemprop="description">Never too old to learn</p>
           </div>
 
           
@@ -641,7 +644,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -713,7 +716,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -810,7 +815,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">carvetime</span>
+  <span class="author" itemprop="copyrightHolder">Wendell Koan</span>
 
   
 
