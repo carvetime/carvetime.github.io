@@ -1,3 +1,3 @@
+http://carvetime.github.io/2019/08/28/vue/vue的属性监听/
 http://carvetime.github.io/2019/08/28/vue/vue的计算属性/
 http://carvetime.github.io/2019/08/27/vue/vue的模板语法/
-http://carvetime.github.io/2019/08/27/vue/vue的入门/
