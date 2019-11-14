@@ -1880,7 +1880,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://carvetime.coding.me/2019/08/03/ios/底层源码/分类的本质/">
+    <link itemprop="mainEntityOfPage" href="http://carvetime.coding.me/2019/07/24/algorithm/队列的存储结构/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -1900,7 +1900,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/03/ios/底层源码/分类的本质/" class="post-title-link" itemprop="url">分类的本质</a>
+                <a href="/2019/07/24/algorithm/队列的存储结构/" class="post-title-link" itemprop="url">队列的存储结构</a>
               
             
           </h1>
@@ -1925,7 +1925,7 @@
                 
               
 
-              <time title="创建时间：2019-08-03 16:23:11 / 修改时间：16:24:00" itemprop="dateCreated datePublished" datetime="2019-08-03T16:23:11+08:00">2019-08-03</time>
+              <time title="创建时间：2019-07-24 21:45:26 / 修改时间：14:46:10" itemprop="dateCreated datePublished" datetime="2019-07-24T21:45:26+08:00">2019-07-24</time>
             
 
             
@@ -1947,14 +1947,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ios/" itemprop="url" rel="index"><span itemprop="name">ios</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ios/底层源码/" itemprop="url" rel="index"><span itemprop="name">底层源码</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
 
                 
                 
@@ -1989,14 +1982,14 @@
 
       
         
-          <p>开发过程中，我们经常用分类来添加一些通用方法，或者划分类的不同行为，那么分类在ios的底层的怎么设计的呢，我们先看看分类的结构体</p>
-<h2 id="分类的结构体"><a href="#分类的结构体" class="headerlink" title="分类的结构体"></a>分类的结构体</h2><p>我们首先创建一个Person类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@interface Person : NSObject</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
-<p>再创建一个Person的分类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@interface Person (Test)</span><br><span class="line"></span><br><span class="line">- (void)say;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
-<p>再通过<code>xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc Preson+Test.m 生成cpp文件</code>编译成c++文件</p>
+          <p>栈是先进后出，队列和栈相反，先进先出(First In First Out),简称FIFO。队列作为一种特殊的线性表，只允许队尾插入，队头删除，同样队列的也有多种存储方式，我们看下常见的几种。</p>
+<h2 id="队列的顺序存储"><a href="#队列的顺序存储" class="headerlink" title="队列的顺序存储"></a>队列的顺序存储</h2><p>队列的的顺序存储和线性表的顺序存储类似，只是添加删除的分别只能在对头和队尾</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 10</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QueueList</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> data[MAX];</span><br><span class="line">    <span class="keyword">int</span> head;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printList</span><span class="params">(struct QueueList *<span class="built_in">list</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = <span class="built_in">list</span>-&gt;head<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(temp &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"index:%d,value:%d\n"</span>,temp,<span class="built_in">list</span>-&gt;data[temp]);</span><br><span class="line">        temp --;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertElement</span><span class="params">(struct QueueList *<span class="built_in">list</span>,<span class="keyword">int</span> element)</span></span>&#123;</span><br><span class="line">    <span class="built_in">list</span>-&gt;data[<span class="built_in">list</span>-&gt;head] = element;</span><br><span class="line">    <span class="built_in">list</span>-&gt;head++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteElement</span><span class="params">(struct QueueList *<span class="built_in">list</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">list</span>-&gt;head &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(temp &lt; <span class="built_in">list</span>-&gt;head)&#123;</span><br><span class="line">            <span class="keyword">int</span> next = temp + <span class="number">1</span>;</span><br><span class="line">            <span class="built_in">list</span>-&gt;data[temp] = <span class="built_in">list</span>-&gt;data[next];</span><br><span class="line">            temp ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">list</span>-&gt;head --;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">QueueList</span> <span class="title">list</span>;</span></span><br><span class="line">    <span class="built_in">list</span>.head = <span class="number">0</span>;</span><br><span class="line">    insertElement(&amp;<span class="built_in">list</span>,<span class="number">0</span>);</span><br><span class="line">    insertElement(&amp;<span class="built_in">list</span>,<span class="number">1</span>);</span><br><span class="line">    insertElement(&amp;<span class="built_in">list</span>,<span class="number">2</span>);</span><br><span class="line">    insertElement(&amp;<span class="built_in">list</span>,<span class="number">3</span>);</span><br><span class="line">    insertElement(&amp;<span class="built_in">list</span>,<span class="number">4</span>);</span><br><span class="line">    printList(&amp;<span class="built_in">list</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"删除后\n"</span>);</span><br><span class="line">    deleteElement(&amp;<span class="built_in">list</span>);</span><br><span class="line">    deleteElement(&amp;<span class="built_in">list</span>);</span><br><span class="line">    printList(&amp;<span class="built_in">list</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>队列的顺序存储插入是比较方便的，时间复杂度是O(1),但是删除操作比较麻烦，每次都是删除对头元素后，后面的元素需要全部往前移动，时间复杂度是O(n),接下来看下来下面的顺序循环存储方式。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/08/03/ios/底层源码/分类的本质/#more" rel="contents">
+              <a class="btn" href="/2019/07/24/algorithm/队列的存储结构/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2090,7 +2083,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2129,11 +2122,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2172,9 +2161,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
